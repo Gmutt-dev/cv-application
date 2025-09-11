@@ -57,10 +57,12 @@ export function GeneralInfoSection() {
               setUserInfo({ ...userInfo, phone: e.target.value })
             }
           />
-          <button type="submit">Submit</button>
-          <button type="button" onClick={handleCancel}>
-            Cancel
-          </button>
+          <div className="button-container">
+            <button type="submit">Submit</button>
+            <button type="button" onClick={handleCancel}>
+              Cancel
+            </button>
+          </div>
         </form>
       ) : (
         <div className="general-info-display">
