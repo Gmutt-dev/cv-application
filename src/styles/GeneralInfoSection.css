@@ -1,0 +1,29 @@
+.general-info-input {
+  /* display: grid; */
+  & .labelled-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.general-info-display {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & p:first-child {
+    grid-column: span 2;
+  }
+
+  &:hover .edit-button {
+    display: block;
+  }
+}
+
+.edit-button {
+  place-self: start start;
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
