@@ -1,9 +1,18 @@
 .general-info-input {
-  /* display: grid; */
+  display: grid;
+  gap: 5px;
+  margin: 5px;
+
   & .labelled-input {
     display: grid;
     grid-template-columns: 100px 1fr;
+    gap: 5px;
     text-align: right;
+  }
+
+  & .button-container {
+    display: flex;
+    gap: 5px;
   }
 }
 
