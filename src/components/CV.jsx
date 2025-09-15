@@ -1,3 +1,6 @@
+import "../styles/CV.css";
+
+import { EducationSection } from "./EducationSection";
 import { GeneralInfoSection } from "./GeneralInfoSection";
 
 export function CV() {
@@ -6,9 +9,10 @@ export function CV() {
       <h1>
         Curriculum Vitae
         <br />
-        of
+        <span>of</span>
       </h1>
       <GeneralInfoSection />
+      <EducationSection />
     </>
   );
 }

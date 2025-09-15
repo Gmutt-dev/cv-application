@@ -1,0 +1,33 @@
+.education-item {
+  border: 1px solid black;
+  & .education-item-display {
+    position: relative;
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+
+    &:hover {
+      & .button-container {
+        display: flex;
+        gap: 5px;
+        position: absolute;
+        right: 5px;
+        bottom: 15px;
+      }
+    }
+    & .button-container {
+      display: none;
+    }
+  }
+
+  & .education-item-input {
+    display: grid;
+    gap: 5px;
+    margin: 5px;
+
+    & .button-container {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}

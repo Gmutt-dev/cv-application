@@ -1,0 +1,19 @@
+.education {
+  border: 1px solid black;
+  padding: 10px;
+  gap: 10px;
+  display: grid;
+  &:hover {
+    & .add-button {
+      display: inline;
+    }
+  }
+
+  & h3 {
+    font-size: 2rem;
+  }
+
+  & .add-button {
+    display: none;
+  }
+}
