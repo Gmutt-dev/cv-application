@@ -4,6 +4,7 @@ import { useState } from "react";
 import { LabelledInput } from "./LabelledInput";
 import { format } from "date-fns";
 
+// Same feedback as in GeneralInfoSection
 export function EducationItem({
   educationListItem,
   handleDelete,
@@ -50,7 +51,9 @@ export function EducationItem({
             type={"date"}
             value={
               educationListItem.endDate &&
-              format(educationListItem.endDate, "yyyy-MM-dd")
+              // You could wrap this in a function so that we only have to write the actual format code once and have the same throughout the app
+              // since this is repeated elsewhere
+              format(educationListItem.endDate, "yyyy-MM-dd") 
             }
             labelText={"End Date: "}
             onChange={(e) => {

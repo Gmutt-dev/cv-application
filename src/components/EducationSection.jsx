@@ -7,6 +7,9 @@ export function EducationSection() {
   const [educationList, setEducationList] = useState([]);
 
   function handleAdd() {
+    // For 'portability' (i.e. the ability to replace specific implementations)
+    // You could create a 'createUUID' function that wraps crypto.randomUUID()
+    // This would mean if you wanted to use the uuid library (common) or even have this value provided by a server, you only need to make once chance in one place
     setEducationList([...educationList, { id: crypto.randomUUID() }]);
   }
 
@@ -38,6 +41,7 @@ export function EducationSection() {
         />
       ))}
 
+      {/* This button is only available on hover. I would prefer this was always visible for user discoverability */}
       <button type="button" className="button add-button" onClick={handleAdd}>
         add
       </button>
